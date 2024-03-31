@@ -2,10 +2,12 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { useRef } from 'react'
 import { useState , useEffect} from 'react';
+import {Link} from 'react-router-dom'
 import {getDownloadURL, getStorage, ref, uploadBytesResumable} from 'firebase/storage'
 import { app } from '../firebase';
 import {updateUserStart, updateUserSuccess, updateUserFailure, deleteUserFailure, deleteUserStart, deleteUserSuccess,signOutUserStart} from '../redux/user/userSlice';
 import { useDispatch } from  'react-redux';
+
 
 // firebase storage
 // allow read;
@@ -168,6 +170,10 @@ const handleSubmit= async(e)=>{
         <button disabled={loading} className='bg-slate-700 text-white rounded-lg p-3 cursor-pointer hover: opacity-95 disabled:opacity-80'>
           {loading ? 'Loading...' :'Update'}
         </button>
+
+        <Link className='bg-green-700 p-3 text-center rounded-lg text-white hover: opacity-95' to={"/create-listing"}>
+          Create Listing
+        </Link>
       </form>
 
       <div className='flex justify-between mt-5'>
