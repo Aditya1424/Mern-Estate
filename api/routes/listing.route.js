@@ -6,6 +6,6 @@ const router = express.Router();
 
 
 // for creating a list
-router.get('/create',verifyToken, createListing);
+router.post('/create',verifyToken, createListing);
 
 export default router;
