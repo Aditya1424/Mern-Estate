@@ -251,7 +251,7 @@ const handleSubmit= async(e)=>{
              <div className='flex flex-col items-center'>
                 <button onClick={()=> handleListingDelete(listing._id)} className='text-red-700'>Delete</button>
                 <Link to={`/update-listing/${listing._id}`}>
-                <button onClick={()=>handleListingUpdate()} className='text-green-700'>Edit</button>
+                <button  className='text-green-700'>Edit</button>
                 </Link>
 
             </div>
