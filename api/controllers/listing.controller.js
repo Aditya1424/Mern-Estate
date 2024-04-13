@@ -111,7 +111,7 @@ export const getListings = async(req, res, next) => {
         const listings = await Listing.find({
             // regex----> when we search something while typing less character
             // option----> it maintains the uppercase and lowercase characters
-            name: {$regex : searchTerm , $option: 'i'},
+            name: {$regex : searchTerm , $options: 'i'},
             offer,
             furnished,
             parking,
