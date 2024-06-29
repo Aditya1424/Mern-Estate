@@ -35,7 +35,7 @@ export default function Header() {
             </h1>
             </Link> 
 
-            <form onSubmit={handleSubmit} className='bg-slate-100 p-3 rounded-lg flex items-center'>
+            {/* <form onSubmit={handleSubmit} className='bg-slate-100 p-3 rounded-lg flex items-center'>
                 <input type="text" placeholder='Search....'  className='bg-transparent focus:outline-none w-24 sm:w-64' 
                 value={searchTerm}
                 onChange={(e)=> setSearchTerm(e.target.value)}/>
@@ -44,7 +44,7 @@ export default function Header() {
                 <FaSearch className='text-slate-600'/>
                 </button>
                 
-            </form>
+            </form> */}
 
             <ul className='flex gap-4'>
 
